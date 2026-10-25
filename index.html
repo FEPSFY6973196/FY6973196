@@ -1,50 +1,444 @@
 <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html>
-  <head>
-     </head>
-<img src="WebBanner2026.png" alt="Banner" width="1200" height="300">
-  <h1><b>ENG0018 Computer Laboratory 2026/27</b><h1>
- <h2>Student URN: 6973196</h2>   
-    <hr>
- <h2 style="font-family:calibri;"><b>Conference paper: From seawater to drinking water:can reverse osmosis solve water scarcity sustainably?</b></h2>
-    <hr>
-    
-    <!style for tables>
-      <style>
-            table {
-            font-family:arial,sans-serif;
-            border-collapse: collapse;
-            width:30%;
+    <title>ENG0018 Conference Paper</title>
 
-      }
-
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-      }
-      
-
-
-
-  </style>
+    <!-- External CSS framework from the lab worksheet -->
+    <link rel="stylesheet"
+          href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
-      p.ex1 {
-        margin-left: 250px;
-      }
-    </style>
-  </head>
+        body {
+            background-color: #FFFFFF;
+            color: #222222;
+            font-family: Calibri, Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+            margin: 0;
+        }
 
-    <meta name="viewport" content="width=device-width, inital-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-  <style>
-    .mySlides {display:none;} 
-    </style>
-    
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 25px 40px;
+        }
 
+        .banner {
+            background-color: #005EB8;
+            color: white;
+            padding: 24px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .banner h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .banner p {
+            margin-bottom: 0;
+        }
+
+        .paper-title {
+            font-family: Calibri, Arial, sans-serif;
+            color: #005EB8;
+            text-align: center;
+            font-size: 30px;
+            margin: 25px 0;
+        }
+
+        .student-details {
+            text-align: center;
+            color: #555555;
+        }
+
+        .contents {
+            background-color: #F2F6FA;
+            border: 1px solid #B8CDE0;
+            padding: 20px 28px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .contents table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .contents th,
+        .contents td {
+            border: 1px solid #C5D2DF;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .contents tr:nth-child(even) {
+            background-color: #E4EDF5;
+        }
+
+        .contents a {
+            color: #005EB8;
+            text-decoration: none;
+        }
+
+        .contents a:hover {
+            text-decoration: underline;
+        }
+
+        h2, h3 {
+            color: #005EB8;
+        }
+
+        h3 {
+            border-bottom: 2px solid #D6E4F0;
+            padding-bottom: 7px;
+            margin-top: 35px;
+        }
+
+        .ex1 {
+            margin-left: 0;
+        }
+
+        .highlight {
+            background-color: #FFF2B2;
+            padding: 2px 5px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            border: 1px solid #777777;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .data-table th {
+            background-color: #005EB8;
+            color: white;
+        }
+
+        .data-table tr:nth-child(even) {
+            background-color: #F2F6FA;
+        }
+
+        .reference {
+            overflow-wrap: anywhere;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #005EB8;
+        }
+
+        .back-to-top {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            color: #666666;
+            border-top: 1px solid #CCCCCC;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 15px;
+            }
+
+            .banner h1 {
+                font-size: 23px;
+            }
+
+            .paper-title {
+                font-size: 25px;
+            }
+
+            .contents th,
+            .contents td,
+            .data-table th,
+            .data-table td {
+                padding: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+<div class="page">
+
+    <!-- Module heading required by the lab -->
+    <header class="banner">
+      <img src="WebBanner2026.png" alt="Banner" width="1200" height="300">
+  <h1><b>ENG0018 Computer Laboratory 2026/27</b><h1>
+ <h2>Student URN: 6973196</h2> 
+    <p class="student-details">
+        Conference Paper | Academic Year 2026/27
+    </p>
+
+    <hr>
+
+    <!-- Replace this example title with your actual paper title -->
+    <h2 class="paper-title">
+        <b>Conference Paper: Drinking Water Contamination
+        and Public Health</b>
+    </h2>
+
+    <hr>
+
+    <!-- Table of contents with working internal links -->
+    <nav class="contents" aria-label="Table of contents">
+        <h3>Table of Contents</h3>
+
+        <table>
+            <tr>
+                <th>Section</th>
+                <th>Title</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="#Abstract">Abstract</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#Introduction">Introduction</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="#Analysis">Analysis and Discussion</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="#DataTable">Data Table</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="#Conclusion">Conclusion</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#References">References</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <!-- Abstract -->
+    <section>
+        <h3 id="Abstract">Abstract</h3>
+
+        <p class="ex1">
+            Drinking water contamination is an important environmental
+            and public health issue. This paper examines how pollutants
+            can enter water supplies, the potential consequences for
+            human health, and the role of water treatment technologies
+            in reducing contamination. It considers the importance of
+            monitoring water quality, preventing pollution at its source,
+            and maintaining effective treatment infrastructure. The
+            discussion highlights the need to evaluate treatment methods
+            according to the contaminants present, their effectiveness,
+            and their practical costs. The paper aims to explain why
+            reliable access to safe drinking water requires both
+            appropriate engineering solutions and continued monitoring.
+        </p>
+    </section>
+
+    <!-- Introduction -->
+    <section>
+        <h3 id="Introduction">Introduction</h3>
+
+        <p>
+            Safe drinking water is essential for human health and
+            well-being. However, water sources may be affected by
+            agricultural runoff, industrial discharges, ageing
+            infrastructure and naturally occurring substances.
+            Contamination can affect water quality and create risks
+            for communities when pollutants are not adequately controlled.
+        </p>
+
+        <p>
+            Water treatment systems use physical, chemical and biological
+            processes to improve water quality. The most appropriate
+            treatment depends on the source of the water and the
+            contaminants that need to be removed.
+        </p>
+
+        <p>
+            This paper examines the causes and consequences of drinking
+            water contamination, evaluates approaches to water treatment,
+            and considers the importance of monitoring and prevention.
+        </p>
+    </section>
+
+    <!-- Analysis and discussion -->
+    <section>
+        <h3 id="Analysis">Analysis and Discussion</h3>
+
+        <h4>Sources of contamination</h4>
+
+        <p>
+            Potential sources of contamination include agricultural
+            chemicals, industrial waste, microbial pollution and
+            substances released from water distribution infrastructure.
+            Different contaminants require different testing and
+            treatment methods, so identifying the source of pollution
+            is an important first step.
+        </p>
+
+        <h4>Water treatment technologies</h4>
+
+        <p>
+            Conventional treatment can include filtration and
+            disinfection. Other methods, such as activated carbon
+            adsorption and membrane filtration, may be appropriate
+            for particular contaminants. Treatment performance depends
+            on the technology selected, operating conditions and
+            the characteristics of the water being treated.
+        </p>
+
+        <p>
+            <span class="highlight">
+                Effective water management combines treatment,
+                monitoring and pollution prevention.
+            </span>
+        </p>
+
+        <h4>Engineering and sustainability</h4>
+
+        <p>
+            The selection of a treatment process should consider more
+            than its initial installation cost. Energy use, maintenance,
+            waste generation, reliability and long-term operating costs
+            are also relevant. An engineering solution must be effective
+            while remaining practical to operate and maintain.
+        </p>
+    </section>
+
+    <!-- Example data table: replace with verified research data -->
+    <section>
+        <h3 id="DataTable">Data Table</h3>
+
+        <p>
+            The table below demonstrates how numerical information
+            can be presented using HTML. These values are illustrative
+            examples, not verified experimental results or research
+            findings.
+        </p>
+
+        <table class="data-table">
+            <caption>
+                Example treatment performance data
+            </caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Treatment method</th>
+                    <th scope="col">Illustrative removal (%)</th>
+                    <th scope="col">Main consideration</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Filtration</td>
+                    <td>85</td>
+                    <td>Particle removal</td>
+                </tr>
+                <tr>
+                    <td>Activated carbon</td>
+                    <td>75</td>
+                    <td>Depends on contaminant</td>
+                </tr>
+                <tr>
+                    <td>Membrane treatment</td>
+                    <td>95</td>
+                    <td>Energy and maintenance</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Actual removal rates must be obtained from reliable
+            sources and will vary according to the contaminant,
+            treatment system and operating conditions.
+        </p>
+    </section>
+
+    <!-- Conclusion -->
+    <section>
+        <h3 id="Conclusion">Conclusion</h3>
+
+        <p>
+            Drinking water contamination presents challenges that
+            require effective engineering, careful monitoring and
+            prevention of pollution. No single treatment method is
+            suitable for every contaminant. Treatment decisions should
+            be based on water quality data, performance evidence,
+            operational requirements and sustainability.
+        </p>
+
+        <p>
+            Further research and accurate reporting of treatment
+            performance can help inform decisions about safe and
+            reliable water supplies.
+        </p>
+    </section>
+
+    <!-- References with external hyperlinks -->
+    <section>
+        <h3 id="References">References</h3>
+
+        <p class="reference">
+            1. World Health Organization (WHO).
+            <i>Guidelines for Drinking-water Quality.</i>
+            <a href="https://www.who.int/publications/i/item/9789240045064"
+               target="_blank"
+               rel="noopener noreferrer">
+                View WHO publication
+            </a>.
+        </p>
+
+        <p class="reference">
+            2. United States Environmental Protection Agency.
+            <i>Drinking Water.</i>
+            <a href="https://www.epa.gov/ground-water-and-drinking-water"
+               target="_blank"
+               rel="noopener noreferrer">
+                View drinking water resources
+            </a>.
+        </p>
+
+        <p class="reference">
+            3. Add another peer-reviewed journal article or
+            authoritative source relevant to your actual paper.
+            Replace this placeholder with the complete reference
+            and a working source hyperlink.
+        </p>
+    </section>
+
+    <hr>
+
+    <p class="back-to-top">
+        <a href="#top">Back to top ↑</a>
+    </p>
+
+    <footer>
+        <p>ENG0018 Computer Laboratory | University of Surrey</p>
+        <p>Conference paper webpage</p>
+    </footer>
+
+</div>
+
+</body>
+</html>    
